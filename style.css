@@ -74,14 +74,14 @@
 
 .search::after {
     position: absolute;
-    content: url('/down.svg');
+    content: url('down.svg');
     width: 16px;
     height: 16px;
     margin-left: 8px;
 }
 
 .search-active::after {
-    content: url('/up.svg');
+    content: url('up.svg');
 }
 
 .input-container-main {
@@ -151,7 +151,7 @@ input:focus {
 }
 
 .input-container > select {
-    background: url('/icon-down.svg') no-repeat right 12px center;
+    background: url('icon-down.svg') no-repeat right 12px center;
     appearance: none; 
 }
 
