@@ -1,0 +1,158 @@
+:root {
+	--rectangle-11-source: #13b1e3;
+	--rectangle-11-200: #94ceec;
+	--rectangle-15-200: #c1c8cb;
+
+	--font-family: "Raleway", sans-serif;
+}
+
+.none {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.header-form {
+    gap: 16px;
+    margin: 0 0 16px;
+    font-family: var(--font-family);
+}
+
+.text {
+    font-family: var(--font-family);
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0; 
+}
+
+.header-form > .search,
+.btns > .btn-remove-all,
+.btns > .btn-add {
+    text-transform: none; 
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.header-form > .search {
+    color: var(--rectangle-11-source);
+    padding: 15px 54px 15px 32px;
+    border: 1px solid var(--rectangle-15-200);
+}
+
+.btns > .btn-remove-all,
+.btns > .btn-add {
+    padding: 8px 32px;
+}
+
+.btns > .btn-add {
+    background-color: var(--rectangle-11-source);
+    border: 1px solid var(--rectangle-11-source);
+}
+
+.btns > .btn-remove-all {
+    color: var(--rectangle-11-source);
+    margin-right: 16px;
+}
+
+.header > .search:hover, 
+.btns > .btn-remove-all:hover {
+    color: var(--rectangle-11-source);
+}
+
+.btns > .btn-add:hover {
+    background-color: var(--rectangle-11-200);
+    border-color: var(--rectangle-11-200);
+}
+
+.search::after {
+    position: absolute;
+    content: url('/down.svg');
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+}
+
+.search-active::after {
+    content: url('/up.svg');
+}
+
+.input-container-main {
+    position: relative;
+    width: 85%;
+}
+
+.input-container-main > input {
+    padding: 8px 16px;
+}
+
+.input-container {
+    position: relative;
+    height: 54px;
+}
+
+.btn-remove {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    right: 10px;
+    top: 50%;
+    transform: translate(-50%, -85%); 
+}
+
+select + .btn-remove {
+    right: 25px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 24px;
+}
+
+.btns {
+    grid-area: 3 / 2;
+    margin-left: auto;
+}
+
+select,
+input {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding: 6px 12px;
+    border: 1px solid var(--rectangle-15-200);
+    color: var(--rectangle-15-900);
+}
+
+input::placeholder {
+    color: var(--rectangle-15-900);
+}
+
+.input-container-main > input:focus,
+select:focus,
+input:focus {
+    outline: 3px solid var(--rectangle-11-200);
+    border: none;  
+    box-shadow: var(--rectangle-11-200);  
+}
+
+.input-container > select {
+    background: url('/icon-down.svg') no-repeat right 12px center;
+    appearance: none; 
+}
+
+
